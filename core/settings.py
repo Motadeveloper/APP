@@ -82,15 +82,18 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'compartil', 
-        'USER':'postgres',
-        'PASSWORD':'L90909090',
+        'USER':'root',
+        'PASSWORD':'l90909090',
         'HOST':'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
+        'OPTIONS': {
+        'charset': 'utf8mb4',
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
     }
 }
-
+}
 
 
 # Password validation
